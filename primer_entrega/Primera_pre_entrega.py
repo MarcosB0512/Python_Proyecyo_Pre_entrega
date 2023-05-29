@@ -5,30 +5,39 @@ bd_usuarios["Usuarios"] = []
 
 menu_opciones = [
     "1: Crear Usuarios",
-    "2: Ver lista de usuarios:",
-    "3: Login:",
-    "4: Exit:"
+    "2: Alta Clientes",
+    "3: Ver lista de usuarios:",
+    "4: Login:",
+    "5: Exit:"
 ]
 
 def menu_option():
     for valor in menu_opciones:
         print(valor)
 
-def ingreso_datos():
+def __ingreso_datos__():
     print("\nALTA DE USUARIOS")
+    nombre = input("Ingrese su Nombre: ")
+    apellido = input("Ingrese su Apellido: ")
+    email = input("Ingrese su EMail: ")
+    telefono = input("Ingrese su telefeno: ")
     alta_usuario = input("Ingrese un nuevo Usuario: ")
     alta_clave = int(input("Ingrese una nueva Clave: "))
 
-    def guardar_usuarios(alta_usuario, alta_clave):    
+    def guardar_usuarios(nombre, apellido, email, telefono, alta_usuario, alta_clave):    
         bd_usuarios["Usuarios"].append({
+            'Nombre': nombre,
+            'Apellido': apellido,
+            'email': email,
+            'telefono': telefono,
             'usuario': alta_usuario,
             'password': alta_clave
         })
-    guardar_usuarios(alta_usuario, alta_clave)        
+    guardar_usuarios(nombre, apellido, email, telefono, alta_usuario, alta_clave)        
      
 
     with open("bd_usuarios.json", "w") as file:
-        json.dump(bd_usuarios, file, indent=2)
+        json.dump(bd_usuarios, file, indent=4)
 
 def listado_usuarios():
     print("\nLISTADO DE USUARIOS CREADOS: ")
@@ -73,11 +82,16 @@ def menu ():
    
     else:
         if opcion == 1: 
-            ingreso_datos()
+            __ingreso_datos__()
             print('\n" EL USUARIO SE CREO EXITOSAMENTE "\n')
             menu()
 
         elif opcion == 2: 
+            listado_usuarios()
+            print()
+            menu()
+        
+        elif opcion == 3: 
             try:
                 listado_usuarios()
                 print()
@@ -88,25 +102,17 @@ def menu ():
                 menu()
             )
                   
-        elif opcion == 3:
+        elif opcion == 4:
             print("\nINGRESO AL SISTEMA")
             input_user = input("Ingrese su Usuario: ")
             login(input_user)
             
-        elif opcion == 4:
+        elif opcion == 5:
             print('\n" HASTA PRONTO !! \n')
             exit()
 
-        elif opcion < 1 or opcion > 4:
-            print("\nEL VALOR A INGRESAR DEBE SER ENTRE 1 y 4 \n INTENTALO NUEVAMENTE...\n"),
+        elif opcion < 1 or opcion > 5:
+            print("\nEL VALOR A INGRESAR DEBE SER ENTRE 1 y 5 \n INTENTALO NUEVAMENTE...\n"),
             menu()
     return opcion
 menu()
-
-
-
-
-
-
-
-

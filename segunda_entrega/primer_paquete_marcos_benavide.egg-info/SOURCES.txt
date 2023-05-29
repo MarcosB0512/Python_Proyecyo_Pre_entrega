@@ -1,0 +1,8 @@
+setup.py
+primer_paquete/Segunda_pre_entrega.py
+primer_paquete/__init__.py
+primer_paquete/alta_cliente.py
+primer_paquete_marcos_benavide.egg-info/PKG-INFO
+primer_paquete_marcos_benavide.egg-info/SOURCES.txt
+primer_paquete_marcos_benavide.egg-info/dependency_links.txt
+primer_paquete_marcos_benavide.egg-info/top_level.txt

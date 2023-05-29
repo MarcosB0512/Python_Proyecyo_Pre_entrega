@@ -1,0 +1,10 @@
+{
+    "Clientes": [
+        {
+            "Nombre": "Silvia",
+            "Apellido": "Kesta",
+            "email": "silvi@hotmail.com",
+            "telefono": "1234-5678"
+        }
+    ]
+}

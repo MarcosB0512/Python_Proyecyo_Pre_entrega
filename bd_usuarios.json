@@ -1,12 +1,20 @@
 {
-  "Usuarios": [
-    {
-      "usuario": "Marcos",
-      "password": 1234
-    },
-    {
-      "usuario": "Silvia",
-      "password": 5678
-    }
-  ]
+      "Usuarios": [
+            {
+                  "Nombre": "Silvia",
+                  "Apellido": "Kestanian",
+                  "email": "skesta@gmail.com",
+                  "telefono": "777-7777",
+                  "usuario": "skesta",
+                  "password": 1234
+            },
+            {
+                  "Nombre": "marcos",
+                  "Apellido": "benavide",
+                  "email": "mbena@gmail.com",
+                  "telefono": "555-8888",
+                  "usuario": "mbena",
+                  "password": 9999
+            }
+      ]
 }
